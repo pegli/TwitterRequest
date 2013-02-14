@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0
+apiversion: 2
+description: My module
+author: Paul Mietz Egli
+license: Apache License 2.0
+copyright: 2013 Paul Mietz Egli
+
+
+# these should not be edited
+name: TwitterRequest
+moduleid: com.obscure.twitterreq
+guid: bc68f0fc-621d-4768-a44e-2eb09b6cc770
+platform: iphone
+minsdk: 3.0.0.GA
