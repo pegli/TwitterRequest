@@ -15,6 +15,12 @@ win.open();
 var TwitterRequest = require('com.obscure.twitterreq');
 Ti.API.info("module is => " + TwitterRequest);
 
+/*
 TwitterRequest.requestAccountInformation(function(e) {
+  label.text = JSON.stringify(e);
+});
+*/
+
+TwitterRequest.requestReverseAuthToken('paulegli', 'RgIGbmLM8X40Y5iXGzYqA', 'qn7Trco1rbsn5kndTZR8YwGm1PcNs0805Pgji2nD5E', function(e) {
   label.text = JSON.stringify(e);
 });

@@ -1,0 +1,3 @@
+[submodule "mobile/ios/vendor/TWReverseAuthExample"]
+	path = mobile/ios/vendor/TWReverseAuthExample
+	url = https://github.com/pegli/TWReverseAuthExample.git

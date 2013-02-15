@@ -23,9 +23,21 @@
 
 /* Begin PBXBuildFile section */
 		24DD6CF91134B3F500162E58 /* ComObscureTwitterreqModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* ComObscureTwitterreqModule.h */; };
-		24DD6CFA1134B3F500162E58 /* ComObscureTwitterreqModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* ComObscureTwitterreqModule.m */; };
+		24DD6CFA1134B3F500162E58 /* ComObscureTwitterreqModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* ComObscureTwitterreqModule.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AA747D9F0F9514B9006C5449 /* ComObscureTwitterreq_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ComObscureTwitterreq_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		DA22759A16CD49CD00A98E95 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA22759916CD49CD00A98E95 /* Social.framework */; };
+		DA6E1C0716CDA75F0003C54A /* TWSignedRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6E1BF116CDA75F0003C54A /* TWSignedRequest.h */; };
+		DA6E1C0816CDA75F0003C54A /* TWSignedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6E1BF216CDA75F0003C54A /* TWSignedRequest.m */; };
+		DA6E1C0D16CDA75F0003C54A /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6E1BFD16CDA75F0003C54A /* NSData+Base64.h */; };
+		DA6E1C0E16CDA75F0003C54A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6E1BFE16CDA75F0003C54A /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DA6E1C0F16CDA75F0003C54A /* OAuth+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6E1BFF16CDA75F0003C54A /* OAuth+Additions.h */; };
+		DA6E1C1016CDA75F0003C54A /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6E1C0016CDA75F0003C54A /* OAuth+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DA6E1C1116CDA75F0003C54A /* OAuthCore.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6E1C0116CDA75F0003C54A /* OAuthCore.h */; };
+		DA6E1C1216CDA75F0003C54A /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6E1C0216CDA75F0003C54A /* OAuthCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DA6E1C1516CDA7920003C54A /* TWAPIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6E1C1316CDA7920003C54A /* TWAPIManager.h */; };
+		DA6E1C1616CDA7920003C54A /* TWAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6E1C1416CDA7920003C54A /* TWAPIManager.m */; };
+		DA6E1C1816CDA7E30003C54A /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6E1C1716CDA7E30003C54A /* Twitter.framework */; };
 		DAD3318F16CC6CEF005D9F1B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD3318E16CC6CEF005D9F1B /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +58,18 @@
 		AA747D9E0F9514B9006C5449 /* ComObscureTwitterreq_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComObscureTwitterreq_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libComObscureTwitterreq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libComObscureTwitterreq.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA22759916CD49CD00A98E95 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		DA6E1BF116CDA75F0003C54A /* TWSignedRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSignedRequest.h; sourceTree = "<group>"; };
+		DA6E1BF216CDA75F0003C54A /* TWSignedRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSignedRequest.m; sourceTree = "<group>"; };
+		DA6E1BFD16CDA75F0003C54A /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		DA6E1BFE16CDA75F0003C54A /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		DA6E1BFF16CDA75F0003C54A /* OAuth+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OAuth+Additions.h"; sourceTree = "<group>"; };
+		DA6E1C0016CDA75F0003C54A /* OAuth+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OAuth+Additions.m"; sourceTree = "<group>"; };
+		DA6E1C0116CDA75F0003C54A /* OAuthCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthCore.h; sourceTree = "<group>"; };
+		DA6E1C0216CDA75F0003C54A /* OAuthCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthCore.m; sourceTree = "<group>"; };
+		DA6E1C1316CDA7920003C54A /* TWAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAPIManager.h; sourceTree = "<group>"; };
+		DA6E1C1416CDA7920003C54A /* TWAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAPIManager.m; sourceTree = "<group>"; };
+		DA6E1C1716CDA7E30003C54A /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		DAD3318E16CC6CEF005D9F1B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -54,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA6E1C1816CDA7E30003C54A /* Twitter.framework in Frameworks */,
+				DA22759A16CD49CD00A98E95 /* Social.framework in Frameworks */,
 				DAD3318F16CC6CEF005D9F1B /* Accounts.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 			);
@@ -73,8 +99,8 @@
 		0867D691FE84028FC02AAC07 /* TwitterRequest */ = {
 			isa = PBXGroup;
 			children = (
-				DAD3318E16CC6CEF005D9F1B /* Accounts.framework */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
+				DA6E1BEA16CDA7450003C54A /* Vendor */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
@@ -85,6 +111,9 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA6E1C1716CDA7E30003C54A /* Twitter.framework */,
+				DA22759916CD49CD00A98E95 /* Social.framework */,
+				DAD3318E16CC6CEF005D9F1B /* Accounts.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -108,6 +137,56 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		DA6E1BEA16CDA7450003C54A /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E1BEB16CDA75F0003C54A /* Source */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		DA6E1BEB16CDA75F0003C54A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E1BEC16CDA75F0003C54A /* Classes */,
+				DA6E1BFB16CDA75F0003C54A /* Vendor */,
+			);
+			name = Source;
+			path = vendor/TWReverseAuthExample/Source;
+			sourceTree = "<group>";
+		};
+		DA6E1BEC16CDA75F0003C54A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E1C1316CDA7920003C54A /* TWAPIManager.h */,
+				DA6E1C1416CDA7920003C54A /* TWAPIManager.m */,
+				DA6E1BF116CDA75F0003C54A /* TWSignedRequest.h */,
+				DA6E1BF216CDA75F0003C54A /* TWSignedRequest.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		DA6E1BFB16CDA75F0003C54A /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E1BFC16CDA75F0003C54A /* ABOAuthCore */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		DA6E1BFC16CDA75F0003C54A /* ABOAuthCore */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E1BFD16CDA75F0003C54A /* NSData+Base64.h */,
+				DA6E1BFE16CDA75F0003C54A /* NSData+Base64.m */,
+				DA6E1BFF16CDA75F0003C54A /* OAuth+Additions.h */,
+				DA6E1C0016CDA75F0003C54A /* OAuth+Additions.m */,
+				DA6E1C0116CDA75F0003C54A /* OAuthCore.h */,
+				DA6E1C0216CDA75F0003C54A /* OAuthCore.m */,
+			);
+			path = ABOAuthCore;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -117,6 +196,11 @@
 			files = (
 				AA747D9F0F9514B9006C5449 /* ComObscureTwitterreq_Prefix.pch in Headers */,
 				24DD6CF91134B3F500162E58 /* ComObscureTwitterreqModule.h in Headers */,
+				DA6E1C0716CDA75F0003C54A /* TWSignedRequest.h in Headers */,
+				DA6E1C0D16CDA75F0003C54A /* NSData+Base64.h in Headers */,
+				DA6E1C0F16CDA75F0003C54A /* OAuth+Additions.h in Headers */,
+				DA6E1C1116CDA75F0003C54A /* OAuthCore.h in Headers */,
+				DA6E1C1516CDA7920003C54A /* TWAPIManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +238,7 @@
 				Japanese,
 				French,
 				German,
+				en,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* TwitterRequest */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -188,6 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DD6CFA1134B3F500162E58 /* ComObscureTwitterreqModule.m in Sources */,
+				DA6E1C0816CDA75F0003C54A /* TWSignedRequest.m in Sources */,
+				DA6E1C0E16CDA75F0003C54A /* NSData+Base64.m in Sources */,
+				DA6E1C1016CDA75F0003C54A /* OAuth+Additions.m in Sources */,
+				DA6E1C1216CDA75F0003C54A /* OAuthCore.m in Sources */,
+				DA6E1C1616CDA7920003C54A /* TWAPIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +305,7 @@
 					armv7,
 				);
 				"ARCHS[sdk=iphonesimulator*]" = i386;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DSTROOT = /tmp/ComObscureTwitterreq.dst;
@@ -263,6 +354,7 @@
 					armv7,
 				);
 				"ARCHS[sdk=iphonesimulator*]" = i386;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/ComObscureTwitterreq.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
