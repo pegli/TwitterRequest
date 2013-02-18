@@ -60,7 +60,7 @@
     
 	ACAccountStore * accountStore = [[ACAccountStore alloc] init];
     ACAccountType * accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
-    [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
+    [accountStore requestAccessToAccountsWithType:accountType withCompletionHandler:^(BOOL granted, NSError *error) {
         NSDictionary * dict = nil;
         if (granted) {
             NSArray * accountsArray = [accountStore accountsWithAccountType:accountType];
@@ -99,7 +99,7 @@
 
     ACAccountStore * accountStore = [[ACAccountStore alloc] init];
     ACAccountType * accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
-    [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
+    [accountStore requestAccessToAccountsWithType:accountType withCompletionHandler:^(BOOL granted, NSError *error) {
         if (!granted) {
             NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:
                                    NUMBOOL(NO), @"granted",
