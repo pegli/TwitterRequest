@@ -9,5 +9,6 @@
 @interface ComObscureTwitterreqModule : TiModule 
 {
 }
-
+@property (nonatomic, strong) NSString * consumerKey;
+@property (nonatomic, strong) NSString * consumerSecret;
 @end

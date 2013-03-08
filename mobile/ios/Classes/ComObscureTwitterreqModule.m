@@ -89,12 +89,8 @@
 
 - (void)requestReverseAuthToken:(id)args {
     NSString * username;
-    NSString * consumerKey;
-    NSString * consumerSecret;
     KrollCallback * callback;
     ENSURE_ARG_AT_INDEX(username, args, 0, NSString)
-    ENSURE_ARG_AT_INDEX(consumerKey, args, 1, NSString)
-    ENSURE_ARG_AT_INDEX(consumerSecret, args, 2, NSString)
     ENSURE_ARG_AT_INDEX(callback, args, 3, KrollCallback)
 
     ACAccountStore * accountStore = [[ACAccountStore alloc] init];
@@ -132,8 +128,8 @@
             return;
         }
         
-        self.apiManager.consumerKey = consumerKey;
-        self.apiManager.consumerSecret = consumerSecret;
+        self.apiManager.consumerKey = self.consumerKey;
+        self.apiManager.consumerSecret = self.consumerSecret;
         
         [self.apiManager performReverseAuthForAccount:account withHandler:^(NSData *responseData, NSError *error) {
             NSDictionary * dict = nil;
@@ -162,6 +158,35 @@
             }, YES);
             NSLog(@"called callback with %@", dict);
         }];
+    }];
+}
+
+- (void)accountSettings:(id)args {
+    NSString * authKey;
+    NSString * authSecret;
+    KrollCallback * callback;
+    ENSURE_ARG_AT_INDEX(authKey, args, 0, NSString)
+    ENSURE_ARG_AT_INDEX(authSecret, args, 1, NSString)
+    ENSURE_ARG_AT_INDEX(callback, args, 2, KrollCallback);
+    
+    self.apiManager.consumerKey = self.consumerKey;
+    self.apiManager.consumerSecret = self.consumerSecret;
+    
+    [self.apiManager accountSettingsForKey:authKey secret:authSecret handler:^(NSData *data, NSError *error) {
+        NSArray * params = nil;
+        if (data) {
+            NSDictionary * dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+            if (!error) {
+                params = [NSArray arrayWithObject:dict];
+            }
+            else {
+                NSLog(@"[ERROR] parse error: %@", [error description]);
+            }
+            
+            TiThreadPerformOnMainThread(^{
+                [callback call:params thisObject:nil];
+            }, YES);
+        }
     }];
 }
 
